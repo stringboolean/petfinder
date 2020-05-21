@@ -1,0 +1,5 @@
+@import "~vue-material/dist/theme/engine";
+
+@include md-register-theme("default", (primary: rgb(240, 163, 176), accent: yellow));
+
+@import "~vue-material/dist/theme/all";
