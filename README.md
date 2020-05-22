@@ -1,4 +1,4 @@
-# unknownproject.vue
+# vue-client.vue
 
 ## Project setup
 ```

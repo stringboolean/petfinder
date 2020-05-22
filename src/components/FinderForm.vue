@@ -8,7 +8,7 @@
 
         <md-card-content>
           <div class="md-layout md-gutter">
-            <div class="md-layout-item md-size-100">
+            <div class="md-layout-item md-size-50">
               <md-field :class="getValidationClass('type')">
                 <label for="animal-type">Type</label>
                 <md-select
@@ -17,6 +17,7 @@
                   v-model="form.type"
                   :disabled="sending"
                 >
+                  <md-option value="any">Any</md-option>
                   <md-option value="dog">Dog</md-option>
                   <md-option value="cat">Cat</md-option>
                   <md-option value="oth">Other</md-option>
@@ -26,10 +27,8 @@
                 >
               </md-field>
             </div>
-          </div>
 
-          <div class="md-layout md-gutter">
-            <div class="md-layout-item md-size-100">
+            <div class="md-layout-item md-size-50">
               <md-field :class="getValidationClass('gender')">
                 <label for="gender">Gender</label>
                 <md-select
@@ -91,10 +90,13 @@
           </div>
         </md-card-content>
 
-        <md-progress-bar md-mode="query" v-if="sending"/>
+        <md-progress-bar md-mode="query" v-if="sending" />
 
         <md-card-actions>
-          <md-button type="submit" class="md-raised md-primary" :disabled="sending"
+          <md-button
+            type="submit"
+            class="md-raised md-primary"
+            :disabled="sending"
             >Search</md-button
           >
         </md-card-actions>
@@ -119,12 +121,12 @@ export default {
   mixins: [validationMixin],
   data: () => ({
     form: {
-      type: null,
+      type: "any",
       breed: null,
       size: null,
-      gender: "A",
+      gender: 'A',
       postcode: null,
-      distance: "100",
+      distance: '100',
     },
     sending: false,
   }),
