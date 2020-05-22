@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Profile from '../views/Profile.vue';
+import Animals from '../views/Animals.vue';
 
 import { authGuard } from '../auth/authGuard';
 
@@ -26,6 +27,11 @@ Vue.use(VueRouter)
     name: 'Profile',
     component: Profile,
     beforeEnter: authGuard
+  },
+  {
+    path: '/animals',
+    name: 'Animals',
+    component: Animals
   }
 ]
 

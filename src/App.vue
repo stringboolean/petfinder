@@ -2,7 +2,9 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link><span v-if="$auth.isAuthenticated"> | </span>
+      <router-link to="/about">About</router-link> |
+      <router-link to="/animals">Animals</router-link>
+      <span v-if="$auth.isAuthenticated"> | </span>
       <router-link v-if="$auth.isAuthenticated" to="/profile">Profile</router-link>
     </div>
     <router-view/>

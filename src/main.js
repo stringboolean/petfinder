@@ -15,6 +15,7 @@ import './assets/css/materialize-theme.scss';
 import router from './router';
 import App from './App.vue';
 
+
 import { domain, clientId } from '../auth_config.json';
 import { Auth0Plugin } from './auth';
 
